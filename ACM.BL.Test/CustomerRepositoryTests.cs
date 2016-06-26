@@ -1,12 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ACM.BL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ACM.BL.Tests
+namespace ACM.BL.Test
 {
     [TestClass()]
     public class CustomerRepositoryTests
@@ -41,6 +36,42 @@ namespace ACM.BL.Tests
             var result = _repo.Find(list, 42);
 
             Assert.IsNull(result);
+        }
+
+        [TestMethod()]
+        public void SortByNameTest()
+        {
+            var list = _repo.Retrieve();
+
+            var result = _repo.SortByName(list);
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual(2, result.First().CustomerId);
+            Assert.AreEqual("Baggins", result.First().LastName);
+            Assert.AreEqual("Bilbo", result.First().FirstName);
+        }
+
+        [TestMethod()]
+        public void SortByNameInReverseTest()
+        {
+            var list = _repo.Retrieve();
+            var result = _repo.SortByNameInReverse(list);
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual(2, result.Last().CustomerId);
+            Assert.AreEqual("Baggins", result.Last().LastName);
+            Assert.AreEqual("Bilbo", result.Last().FirstName);
+        }
+
+        [TestMethod()]
+        public void SortByTypeTest()
+        {
+            var list = _repo.Retrieve();
+            var result = _repo.SortByType(list);
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual(null, result.Last().CustomerTypeId);
+
         }
     }
 }

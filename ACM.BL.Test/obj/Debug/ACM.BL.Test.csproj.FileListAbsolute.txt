@@ -6,3 +6,11 @@ C:\Users\ramos\documents\visual studio 2015\Projects\ACM - Daniel Ramos\ACM.BL.T
 C:\Users\ramos\documents\visual studio 2015\Projects\ACM - Daniel Ramos\ACM.BL.Test\obj\Debug\ACM.BL.Test.csprojResolveAssemblyReference.cache
 C:\Users\ramos\documents\visual studio 2015\Projects\ACM - Daniel Ramos\ACM.BL.Test\obj\Debug\ACM.BL.Test.dll
 C:\Users\ramos\documents\visual studio 2015\Projects\ACM - Daniel Ramos\ACM.BL.Test\obj\Debug\ACM.BL.Test.pdb
+C:\Users\ramos\Workspace\ACM\ACM.BL.Test\bin\Debug\ACM.BL.Test.dll
+C:\Users\ramos\Workspace\ACM\ACM.BL.Test\bin\Debug\ACM.BL.Test.pdb
+C:\Users\ramos\Workspace\ACM\ACM.BL.Test\bin\Debug\ACM.BL.dll
+C:\Users\ramos\Workspace\ACM\ACM.BL.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\ramos\Workspace\ACM\ACM.BL.Test\bin\Debug\ACM.BL.pdb
+C:\Users\ramos\Workspace\ACM\ACM.BL.Test\obj\Debug\ACM.BL.Test.csprojResolveAssemblyReference.cache
+C:\Users\ramos\Workspace\ACM\ACM.BL.Test\obj\Debug\ACM.BL.Test.dll
+C:\Users\ramos\Workspace\ACM\ACM.BL.Test\obj\Debug\ACM.BL.Test.pdb

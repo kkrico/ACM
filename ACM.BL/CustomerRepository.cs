@@ -27,7 +27,7 @@ namespace ACM.BL
             //                    select customer;
             //foundCustomer = query.First();
 
-            //foundCustomer = customerList.FirstOrDefault(c => c.CustomerId == customerId);
+            foundCustomer = customerList.FirstOrDefault(c => c.CustomerId == customerId);
 
             //foundCustomer = customerList.FirstOrDefault(c =>
             //{
@@ -35,9 +35,9 @@ namespace ACM.BL
             //    return c.CustomerId == customerId;
             //});
 
-            foundCustomer = customerList.Where(c => c.CustomerId == customerId)
-                                        .Skip(1)
-                                        .FirstOrDefault();
+            //foundCustomer = customerList.Where(c => c.CustomerId == customerId)
+            //                            .Skip(1)
+            //                            .FirstOrDefault();
 
             return foundCustomer;
         }
@@ -70,6 +70,29 @@ namespace ACM.BL
                             EmailAddress = "rc@hob.me",
                             CustomerTypeId=2}};
             return custList;
+        }
+
+        public IEnumerable<Customer> SortByName(List<Customer> customers)
+        {
+            return customers.OrderBy(c => c.LastName).ThenBy(c => c.FirstName);
+        }
+
+        public IEnumerable<Customer> SortByNameInReverse(List<Customer> customers)
+        {
+            //return customers.OrderByDescending(c => c.LastName).ThenByDescending(c => c.FirstName);
+
+            return SortByName(customers).Reverse();
+        }
+
+        public IEnumerable<Customer> SortByType(List<Customer> customers)
+        {
+            return customers.OrderByDescending(c => c.CustomerTypeId.HasValue)
+                            .ThenBy(c => c.CustomerTypeId);
+        }
+
+        public IEnumerable<Customer> RetrieveEmptyList()
+        {
+            return Enumerable.Repeat(new Customer(), Retrieve().Count);
         }
     }
 }
