@@ -43,5 +43,19 @@ namespace ACM.BL.Test
 
             Assert.IsNotNull(result);
         }
+
+        [TestMethod()]
+        public void CompareSequencesTest()
+        {
+            var result = _builder.CompareSequences();
+
+            foreach (var item in result)
+            {
+                TestContext.WriteLine(item.ToString());
+            }
+
+
+            Assert.IsNotNull(result);
+        }
     }
 }

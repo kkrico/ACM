@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using ACM.BL;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ACM.BL.Test
@@ -7,6 +8,7 @@ namespace ACM.BL.Test
     public class CustomerRepositoryTests
     {
         private CustomerRepository _repo;
+        public TestContext TestContext { get; set; }
 
         [TestInitialize]
         public void TestInitialize()
@@ -72,6 +74,21 @@ namespace ACM.BL.Test
             Assert.IsNotNull(result);
             Assert.AreEqual(null, result.Last().CustomerTypeId);
 
+        }
+
+        [TestMethod()]
+        public void GetNamesTest()
+        {
+            var customerList = _repo.Retrieve();
+
+            var query = _repo.GetNames(customerList);
+
+            foreach (var item in query)
+            {
+                TestContext.WriteLine(item);
+            }
+
+            Assert.IsNotNull(query);
         }
     }
 }

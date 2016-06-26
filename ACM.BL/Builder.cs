@@ -27,5 +27,14 @@ namespace ACM.BL
 
             return strings;
         }
+
+        public IEnumerable<int> CompareSequences()
+        {
+            var seq1 = Enumerable.Range(0, 10);
+            var seq2 = Enumerable.Range(0, 10)
+                .Select(i => i * i);
+
+            return seq1.Union(seq2);
+        }
     }
 }

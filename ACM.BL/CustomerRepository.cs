@@ -72,6 +72,13 @@ namespace ACM.BL
             return custList;
         }
 
+        public IEnumerable<string> GetNames(List<Customer> customers)
+        {
+            var query = customers.Select(c => $"{c.LastName} , {c.FirstName}");
+
+            return query;
+        }
+
         public IEnumerable<Customer> SortByName(List<Customer> customers)
         {
             return customers.OrderBy(c => c.LastName).ThenBy(c => c.FirstName);
