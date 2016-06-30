@@ -13,5 +13,13 @@ namespace ACM.BL
         public DateTime InvoiceDate { get; set; }
         public DateTime DueDate { get; set; }
         public bool? IsPaid { get; set; }
+        public decimal Amount { get; set; }
+        public int NumberOfUnits { get; set; }
+        public decimal DiscountPercent { get; set; }
+
+        public decimal TotalAmount
+        {
+            get { return Amount - (this.Amount * (this.DiscountPercent / 100)); }
+        }
     }
 }

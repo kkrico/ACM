@@ -5,6 +5,6 @@ C:\Users\ramos\documents\visual studio 2015\Projects\ACM - Daniel Ramos\ACM.BL\o
 C:\Users\ramos\documents\visual studio 2015\Projects\ACM - Daniel Ramos\ACM.BL\obj\Debug\ACM.BL.pdb
 C:\Users\ramos\Workspace\ACM\ACM.BL\bin\Debug\ACM.BL.dll
 C:\Users\ramos\Workspace\ACM\ACM.BL\bin\Debug\ACM.BL.pdb
-C:\Users\ramos\Workspace\ACM\ACM.BL\obj\Debug\ACM.BL.csprojResolveAssemblyReference.cache
 C:\Users\ramos\Workspace\ACM\ACM.BL\obj\Debug\ACM.BL.dll
 C:\Users\ramos\Workspace\ACM\ACM.BL\obj\Debug\ACM.BL.pdb
+C:\Users\ramos\Workspace\ACM\ACM.BL\obj\Debug\ACM.BL.csprojResolveAssemblyReference.cache
