@@ -125,5 +125,14 @@ namespace ACM.BL.Test
 
             Assert.IsNotNull(query);
         }
+
+        [TestMethod]
+        public void GetInvoiceTotalByCustomerType()
+        {
+            var customerList = _customerRepo.Retrieve();
+            var customerTypeList = _customerTypeRepo.Retrieve();
+
+            var query = _customerRepo.GetInvoiceTotalByCustomerType(customerList, customerTypeList);
+        }
     }
 }

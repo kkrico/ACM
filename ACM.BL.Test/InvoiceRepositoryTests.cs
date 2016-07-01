@@ -52,5 +52,34 @@ namespace ACM.BL.Test
 
             var actual = _invoiceRepo.GetInvoiceTotalByIsPaidAndMonth(invoiceList);
         }
+
+        [TestMethod]
+        public void CalculateMeanTest()
+        {
+            var invoiceList = _invoiceRepo.Retrieve();
+
+            var actual = _invoiceRepo.CalculateMean(invoiceList);
+        }
+
+
+        [TestMethod]
+        public void CalculateMedian()
+        {
+            var invoiceList = _invoiceRepo.Retrieve();
+            var actual = _invoiceRepo.CalculateMedian(invoiceList);
+
+            Assert.AreEqual(10M, actual);
+        }
+
+        [TestMethod]
+        public void CalculateMode()
+        {
+            var invoiceList = _invoiceRepo.Retrieve();
+
+            var actual = _invoiceRepo.CalculateMode(invoiceList);
+
+            Assert.IsNotNull(actual);
+            Assert.AreEqual(10M, actual);
+        }
     }
 }

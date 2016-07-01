@@ -8,3 +8,4 @@ C:\Users\ramos\Workspace\ACM\ACM.BL\bin\Debug\ACM.BL.pdb
 C:\Users\ramos\Workspace\ACM\ACM.BL\obj\Debug\ACM.BL.dll
 C:\Users\ramos\Workspace\ACM\ACM.BL\obj\Debug\ACM.BL.pdb
 C:\Users\ramos\Workspace\ACM\ACM.BL\obj\Debug\ACM.BL.csprojResolveAssemblyReference.cache
+C:\Users\ramos\Workspace\ACM\ACM.BL\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll

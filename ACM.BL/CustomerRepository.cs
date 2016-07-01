@@ -78,6 +78,35 @@ namespace ACM.BL
             return custList;
         }
 
+        public dynamic GetInvoiceTotalByCustomerType(List<Customer> customerList,
+                List<CustomerType> customerTypeList)
+        {
+
+            var customerQuery = customerList.Join(customerTypeList,
+                c => c.CustomerTypeId, ct => ct.CustomerTypeId, (c, ct) => new
+                {
+                    CustomerInstance = c,
+                    CustomerTypeName = ct.TypeName
+                });
+
+            var query = customerQuery.GroupBy(c => c.CustomerTypeName,
+                ct => ct.CustomerInstance.InvoiceList.Sum(inv => inv.TotalAmount),
+                (key, invTotal) => new
+                {
+                    Key = key,
+                    InvoiceAmount = invTotal.Sum()
+                });
+
+
+            foreach (var item in query)
+            {
+
+                Console.WriteLine(item.Key + ":" + item.InvoiceAmount);
+            }
+
+            return query;
+        }
+
         public IEnumerable<string> GetNames(List<Customer> customers)
         {
             var query = customers.Select(c => $"{c.LastName} , {c.FirstName}");
